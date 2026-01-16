@@ -19,24 +19,33 @@ Automated workflow (e-commerce style):
 - **Screenshot capture on failure** for debugging
 
 ## Repository Structure
-- tests/ # pytest test cases + conftest.py (fixtures)
--pageObjects/ # Page Object classes (Login, Shop, Checkout/Confirmation)
-- data/ # JSON test data
-- utils/ # helper utilities
-- Reports/ # HTML reports + failure screenshots
-- pytest.ini # pytest configuration
-- requirements.txt # dependencies
+- tests/ -->pytest test cases + conftest.py (fixtures)
+-pageObjects/ -->Page Object classes (Login, Shop, Checkout/Confirmation)
+- data/ -->JSON test data
+- utils/ -->helper utilities
+- Reports/ -->HTML reports + failure screenshots
+- pytest.ini -->pytest configuration
+- requirements.txt -->dependencies
 
 
 ## Setup
 ### Prerequisites
 - Python 3.8+
+> check through terminal if python is installed : ```python3 --version```
+> check where python is installed : ```which python3```
+> how to check pip is installed before installing dependencies: ```pip3 --version```
 - Google Chrome installed
 
-### Install dependencies
+### Install Dependencies
+Once python is installed,
+run the following command:
 ```bash
-pip install -r requirements.txt
+python3 -m pip install -r requirements.txt
 ```
+then 
+```pytest```
+
+
 ## Run Tests
 1. Run all tests: ```pytest```
 2. Run a single test: ```pytest tests/test_e2eTestFramework.py```
