@@ -20,7 +20,18 @@ Automated workflow (e-commerce style):
 * Page Object Model (POM) (separate page classes for UI actions/locators)
 * Test data externalized** via JSON
 
+##  Quick Start 
 
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+pytest
+open Reports/report.html
+# more run options
+pytest --browser_name=chrome
+pytest --browser_name=chrome --headless
+````
 
 ## Project Structure
 
@@ -203,5 +214,4 @@ open Reports/report.html
 
 * Parallel execution (pytest-xdist)
 * CI/CD integration (GitHub Actions / Jenkins)
-* Screenshot capture on failure
 * Browser cross-compatibility
